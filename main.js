@@ -6,6 +6,7 @@ const app = express();
 const port = 3000;
 
 app.use(cors());
+app.use(express.json());
 
 //Host, user, password database
 const connection = mysql.createConnection({
@@ -48,6 +49,18 @@ app.get('/single-safe', (req, res) => {
         }
     );
 });
+
+//----- Pokémon endpoints (William) -----
+
+
+//----- Trainer endpoints (Sebastian) -----
+
+
+//----- Statistics endpoints (Olivier) -----
+
+
+//----- Battle endpoints (Thomas) -----
+
 
 app.listen(port, () =>{
     console.log(`Application is now running on port ${port}`);
