@@ -24,6 +24,15 @@ The database comes first – the other endpoints depend on it.
 
 ## Running the server
 
+Needs Node 20.6 or newer (`node -v`).
+
 1. `npm install`
-2. Create a `.env` file (never pushed) with `DBHOST`, `DBUSER`, `DBPASSWORD` and `DBDATABASE`.
-3. `node --env-file=.env main.js` – the server runs on `http://localhost:3000`.
+2. Copy `.env.example` to `.env` and fill in your own MySQL details. `.env` is never pushed.
+3. `npm start` – the server runs on `http://localhost:3000`.
+
+After pulling new backend code: stop the server (Ctrl+C) and run `npm start` again.
+
+## Database
+
+Git only syncs code – everyone has their own MySQL database on their own computer.
+SQL scripts (tables and test data) go in the `database/` folder. After pulling a new or changed script, run it in MySQL Workbench so your database matches everyone else's.
